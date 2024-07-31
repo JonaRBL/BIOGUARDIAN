@@ -1,0 +1,145 @@
+
+/*AGREGAR IMAGEN FONDO CON CSS*/
+body{
+    
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #FFFFFF;
+}
+/*clase propia CONTENEDOR DE FORMULARIO*/
+.contenedorForm {
+    position: relative;
+    background: #3A7038;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 100%; /* Asegura que el ancho máximo sea del 100% */
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 767.98px) {
+    .contenedorForm {
+      width: 90%; /* En pantallas pequeñas, ocupa el 90% del ancho */
+    }
+  }
+  
+  /* Estilos para pantallas medianas */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .contenedorForm {
+      width: 70%; /* En pantallas medianas, ocupa el 70% del ancho */
+    }
+  }
+  
+  /* Estilos para pantallas grandes */
+  @media (min-width: 992px) {
+    .contenedorForm {
+      width: 40vw; /* En pantallas grandes, ocupa el 40vw de ancho */
+    }
+  }
+.contenedorForm2{
+    position: relative;
+    background: #3A7038;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+/*clase para EDITAR TITULO PRINCIPAL*/
+h1 {
+    font-family: 'Alfa Slab One', cursive;
+    color:black;
+}
+.tituloin{
+    color:white;
+}
+.letras{
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+.letras2{
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+/* EDITAR TEXTO DEBAJO DEL TITULO*/
+h3 {
+    text-shadow: 7px 4px 5px green;
+    font-family: fantasy;
+    color: beige;
+}
+/*EDITAR CONTENEDOR DE RECUPERAR CONTRASEÑA*/
+.contenedorREC{
+    position: relative;
+    top: 10vh;
+    height:30vh;
+    width:40vw;
+    background: beige;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px black;
+    margin: 0 auto;
+    
+}
+/*EDITAR CONTENEDORES CARD*/
+.contenedorCARD {
+    height:15vh;
+    width:20vw;
+}   
+/*EDITAR POSICION DE CARDS*/
+.contC{
+    margin: 0 auto;
+    
+    top: 10vh;
+    height:30vh;
+    width:60vw;
+}
+/*LARGO DE UN CONTENEDOR*/
+.alturaAlta{
+    height: 23rem;
+}
+.navbar-custom {
+    background-color: #3A7038; /* Cambia este valor al color deseado */
+}
+.navbar-brand {
+    font-family: 'Alfa Slab One', cursive;
+    color: #FFFFFF; /* Color blanco */
+}
+.navbar-nav .nav-link {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF; /* Color blanco */
+}
+.a {
+    text-align: center; /* Centra el contenido del div horizontalmente */
+}
+.nav-link.bold {
+    font-weight: bold;
+}
+.separacion{
+    display: flex; 
+    justify-content: space-between;
+    text-decoration: none;
+}
+.acceso{
+    color: #09EF00;
+}
+.cance{
+    color: #2F462E;
+}
+#botonacceso{
+    background-color: #09EF00;
+}
+#botoncance{
+    background-color:#2F462E;
+}
+#botonacceso:hover {
+    background-color: #09EF00; /* Color de fondo al pasar el mouse (mismo color para mantenerlo igual) */
+    color: black; /* Color de texto al pasar el mouse */
+}
+#botoncance:hover {
+    background-color:#2F462E; /* Color de fondo al pasar el mouse (mismo color para mantenerlo igual) */
+    color: white; /* Color de texto al pasar el mouse */
+}
+.custom-table {
+    background-color: #3A7038;
+}
+
