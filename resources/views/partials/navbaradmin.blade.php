@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('admin') ? 'font-weight-bold' : '' }}" href="{{ route('apodIndex') }}">
+                    <a class="nav-link {{ request()->routeIs('admin','adm2') ? 'font-weight-bold' : '' }}" href="{{ route('apodIndex') }}">
                         Educación Ambiental
                     </a>
                 </li>

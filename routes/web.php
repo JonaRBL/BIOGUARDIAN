@@ -6,6 +6,7 @@ use App\Http\Controllers\EspecialistaController;
 use App\Http\Controllers\AmbientalistaController;
 use App\Http\Controllers\CiudadanoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controlpublicaciones;
 /* use App\Http\Controllers\Auth; */
 
 /*
@@ -56,3 +57,34 @@ Route::middleware(['auth'])->group(function () {
         // Agrega más rutas para ciudadano aquí
     });
 });
+
+// Rutas para el controlador de publicaciones
+Route::post('/guardarpublicacion', [controlpublicaciones::class, 'guardarp'])->name('guardarpublicacion');
+
+Route::post('/editarpubli/{id}', [controlPublicaciones::class, 'editarpublicacion'])->name('publicacion.update');
+
+Route::post('/editarelimi/{id}', [controlPublicaciones::class, 'eliminarpublicacion'])->name('publicacion.delete');
+
+/* Route::get('/', [controlpublicaciones::class,'index'])->name('home'); */
+
+Route::view('/public', 'publicaciones')->name('publicaciones');
+Route::view('/avistamientos', '/avistamientos/avisespamb')->name('avistamientos');
+Route::view('/regavist', 'regisavis')->name('registroavis');
+
+Route::get('/inicio/inicioesp', [controlpublicaciones::class, 'index'])->name('esp2');
+Route::get('/inicio/inicioamb', [controlpublicaciones::class, 'index'])->name('amb2');
+Route::get('/inicio/inicioadmin', [controlpublicaciones::class, 'index'])->name('adm2');
+Route::get('/inicio/iniciociudadano', [controlpublicaciones::class, 'index'])->name('ciu2');
+/* Route::get('/', [controlpublicaciones::class, 'index'])->name('ini2'); */
+
+Route::post('/guardaravistamiento', [AvistamientoController::class, 'guardara'])->name('guardaravis');
+
+Route::post('/editaravist/{id}', [AvistamientoController::class, 'editarAvistamiento'])->name('avistamiento.update');
+
+Route::post('/eliminaravis/{id}', [AvistamientoController::class, 'eliminarAvistamiento'])->name('avistamiento.delete');
+
+Route::get('/avistamientos/avisesp', [AvistamientoController::class, 'index'])->name('aesp2');
+Route::get('/avistamientos/avisamb', [AvistamientoController::class, 'index'])->name('aamb2');
+Route::get('/avistamientos/avisadmin', [AvistamientoController::class, 'index'])->name('aadm2');
+Route::get('/avistamientos/avisciudadano', [AvistamientoController::class, 'index'])->name('aciu2');
+
