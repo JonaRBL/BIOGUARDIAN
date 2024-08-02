@@ -10,17 +10,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('ciudadano','ciu2') ? 'font-weight-bold' : '' }}" href="{{ route('apodIndex') }}">
+                    <a class="nav-link {{ request()->routeIs('ciudadano','ciu2') ? 'font-weight-bold' : '' }}" href="{{ route('ciudadano') }}">
                         Educación Ambiental
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('avistamientos') ? 'font-weight-bold' : '' }}" href="{{ route('apodIndex') }}">
+                    <a class="nav-link {{ request()->routeIs('avistamientos','aciu2') ? 'font-weight-bold' : '' }}" href="{{ route('aciu2') }}">
                         Avistamientos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('registroavis') ? 'font-weight-bold' : '' }}" href="{{ route('apodIndex') }}">
+                    <a class="nav-link {{ request()->routeIs('registroavisciu') ? 'font-weight-bold' : '' }}" href="{{ route('registroavisciu') }}">
                         Registro de avistamientos
                     </a>
                 </li>
@@ -48,7 +48,7 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->name }} - {{ Auth::user()->role }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

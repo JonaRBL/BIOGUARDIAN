@@ -10,13 +10,13 @@
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">Ubicación</label>
-                        <input type="text" name="txtUbicacion" id="txtUbicacion" class="form-control" value="{{($item->ubicacion)}}" >
+                        <input type="text" name="txtUbicacion" id="txtUbicacion" class="form-control" value="{{($item->ubicacion)}}" required>
                         <div id="map" style="height: 300px; width: 100%;"></div>
                         <p class="fw-bolder">{{ $errors->first('txtUbicacion')}}</p>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Información</label>
-                        <input type="text" name="txtInformacion" class="form-control" value="{{($item->informacion)}}" >
+                        <input type="text" name="txtInformacion" class="form-control" value="{{($item->informacion)}}" required>
                         <p class="fw-bolder">{{ $errors->first('txtInformacion')}}</p>
                     </div> 
             </div>

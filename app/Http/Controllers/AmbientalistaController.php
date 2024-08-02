@@ -12,7 +12,7 @@ class AmbientalistaController extends Controller
     public function inicio()
     {
         $consultaPublicaciones= DB::table('tb_publicaciones')->get();
-        return view('/inicio/inicioespamb', compact('consultaPublicaciones'));
+        return view('/inicio/inicioamb', compact('consultaPublicaciones'));
     }
 
     public function guardarp(Request $req)

@@ -10,22 +10,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('especialista','ambientalista','esp2','amb2') ? 'font-weight-bold' : '' }}" href="{{ route('ambientalista') }}">
+                    <a class="nav-link {{ request()->routeIs('especialista','esp2') ? 'font-weight-bold' : '' }}" href="{{ route('especialista') }}">
                         Educación Ambiental
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('avistamientos','aamb2') ? 'font-weight-bold' : '' }}" href="{{ route('aamb2') }}">
+                    <a class="nav-link {{ request()->routeIs('avistamientos','aesp2') ? 'font-weight-bold' : '' }}" href="{{ route('aesp2') }}">
                         Avistamientos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('registroavis') ? 'font-weight-bold' : '' }}" href="{{ route('registroavis') }}">
+                    <a class="nav-link {{ request()->routeIs('registroavisesp') ? 'font-weight-bold' : '' }}" href="{{ route('registroavisesp') }}">
                         Registro de avistamientos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('publicaciones') ? 'font-weight-bold' : '' }}" href="{{ route('publicaciones') }}">
+                    <a class="nav-link {{ request()->routeIs('publicacionesesp') ? 'font-weight-bold' : '' }}" href="{{ route('publicacionesesp') }}">
                         Crear publicación
                     </a>
                 </li>
@@ -53,7 +53,7 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->name }} - {{ Auth::user()->role }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

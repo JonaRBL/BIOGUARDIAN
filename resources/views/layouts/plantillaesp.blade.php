@@ -16,9 +16,31 @@
     <title>@yield('titulo')</title>
 </head>
 <body>
-    @include('partials.navbarciudadano')
+    @include('partials.navbaresp')
     
     @yield('contenido')
+
+   {{--  <script>
+        @if(session('success'))
+            Swal.fire({
+                icon: 'success',
+                title: 'Éxito',
+                text: "{{ session('success') }}",
+                timer: 3000,
+                showConfirmButton: false
+            });
+        @endif
+
+        @if(session('error'))
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "{{ session('error') }}",
+                timer: 3000,
+                showConfirmButton: false
+            });
+        @endif
+    </script> --}}
     
 </body>
 </html>

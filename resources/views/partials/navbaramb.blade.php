@@ -10,18 +10,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('admin','adm2') ? 'font-weight-bold' : '' }}" href="{{ route('admin') }}">
+                    <a class="nav-link {{ request()->routeIs('especialista','ambientalista','esp2','amb2') ? 'font-weight-bold' : '' }}" href="{{ route('ambientalista') }}">
                         Educación Ambiental
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('avistamientos','aadm2') ? 'font-weight-bold' : '' }}" href="{{ route('aadm2') }}">
+                    <a class="nav-link {{ request()->routeIs('avistamientos','aamb2') ? 'font-weight-bold' : '' }}" href="{{ route('aamb2') }}">
                         Avistamientos
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('consultas') ? 'font-weight-bold' : '' }}" href="{{ route('consultas') }}">
-                        Consultas
+                    <a class="nav-link {{ request()->routeIs('registroavis') ? 'font-weight-bold' : '' }}" href="{{ route('registroavis') }}">
+                        Registro de avistamientos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('publicaciones') ? 'font-weight-bold' : '' }}" href="{{ route('publicaciones') }}">
+                        Crear publicación
                     </a>
                 </li>
             </ul>

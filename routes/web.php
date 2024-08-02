@@ -7,6 +7,7 @@ use App\Http\Controllers\AmbientalistaController;
 use App\Http\Controllers\CiudadanoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controlpublicaciones;
+use App\Http\Controllers\UserController;
 /* use App\Http\Controllers\Auth; */
 
 /*
@@ -24,13 +25,13 @@ use App\Http\Controllers\controlpublicaciones;
     return view('index');
 }); */
 
-Route::view('/', 'index')->name('apodIndex');
+/* Route::view('/', 'index')->name('apodIndex'); */
 
 Auth::routes();
 
 Route::resource('home',AvistamientoController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [controlpublicaciones::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
     // Rutas para Admin
@@ -68,14 +69,20 @@ Route::post('/editarelimi/{id}', [controlPublicaciones::class, 'eliminarpublicac
 /* Route::get('/', [controlpublicaciones::class,'index'])->name('home'); */
 
 Route::view('/public', 'publicaciones')->name('publicaciones');
-Route::view('/avistamientos', '/avistamientos/avisespamb')->name('avistamientos');
+Route::view('/avistamientos', '/avistamientos/avisesp')->name('avistamientosesp');
+Route::view('/avistamientos', '/avistamientos/avisamb')->name('avistamientosamb');
+Route::view('/avistamientos', '/avistamientos/avisadmin')->name('avistamientosadmin');
+Route::view('/avistamientos', '/avistamientos/avisciudadano')->name('avistamientosciud');
 Route::view('/regavist', 'regisavis')->name('registroavis');
+Route::view('/publicesp', 'publicacionesesp')->name('publicacionesesp');
+Route::view('/regavistesp', 'regisavisesp')->name('registroavisesp');
+Route::view('/regavistciu', 'regisavisciu')->name('registroavisciu');
 
 Route::get('/inicio/inicioesp', [controlpublicaciones::class, 'index'])->name('esp2');
 Route::get('/inicio/inicioamb', [controlpublicaciones::class, 'index'])->name('amb2');
 Route::get('/inicio/inicioadmin', [controlpublicaciones::class, 'index'])->name('adm2');
 Route::get('/inicio/iniciociudadano', [controlpublicaciones::class, 'index'])->name('ciu2');
-/* Route::get('/', [controlpublicaciones::class, 'index'])->name('ini2'); */
+Route::get('/', [controlpublicaciones::class, 'index'])->name('index');
 
 Route::post('/guardaravistamiento', [AvistamientoController::class, 'guardara'])->name('guardaravis');
 
@@ -88,3 +95,7 @@ Route::get('/avistamientos/avisamb', [AvistamientoController::class, 'index'])->
 Route::get('/avistamientos/avisadmin', [AvistamientoController::class, 'index'])->name('aadm2');
 Route::get('/avistamientos/avisciudadano', [AvistamientoController::class, 'index'])->name('aciu2');
 
+Route::get('/users', [UserController::class, 'index'])->name('consultas');
+Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
+Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+Route::delete('/avistamientos/{id}', [AvistamientoController::class, 'destroy'])->name('avistamientos.destroy');

@@ -22,7 +22,7 @@
             <div class="modal-footer">
                 <div class="card-footer text-body-secondary">
                     <div class="d-grid mx-auto">
-                        <button class="btn btn-outline-success" type="submit">Elliminar</button>
+                        <button class="btn btn-outline-success" type="submit">Eliminar</button>
                     </div>
                 </div>
                 </form> 

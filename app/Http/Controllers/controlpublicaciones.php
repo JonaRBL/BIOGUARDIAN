@@ -30,8 +30,9 @@ class controlpublicaciones extends Controller
             case 'ciudadano':
                 return 'inicio.iniciociudadano';
             case 'especialista':
+                return 'inicio.inicioesp';
             case 'ambientalista':
-                return 'inicio.inicioespamb';
+                return 'inicio.inicioamb';
             default:
                 return 'index'; // Vista por defecto
         }
@@ -90,15 +91,18 @@ class controlpublicaciones extends Controller
             'comentario'=>$req->input('txtComentario'),
             'updated_at'=>Carbon::now(),
         ]);
-        return back()->with('confirmacion','Publicación editada correctamente');
 
+        if ($req->ajax()) {
+            return response()->json(['success' => true]);
+        }
+
+        return back()->with('success', 'Publicación editada correctamente');
     }
 
     public function eliminarpublicacion(Request $req, string $id)
     {
         DB::table('tb_publicaciones')->where('id', $id)->delete();
 
-        return back()->with('confirmacion', 'Publicación eliminada correctamente');
+        return redirect()->back()->with('success', 'Publicación eliminada exitosamente');
     }
-
 }

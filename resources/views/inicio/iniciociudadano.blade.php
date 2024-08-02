@@ -41,7 +41,25 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  
-  <h1 class="display-1 text-dark text-center mt-4">Publicación</h1>
+  <div class="card-container">
+    @foreach ($consultaPublicaciones as $item)
+        <div class="card mb-3">
+            <div class="row g-0">
+                @if($item->foto_publi)
+                    <div class="col-md-4 img-container">
+                        <img src="{{ asset('storage/' . $item->foto_publi) }}" class="img-fluid rounded-start card-img" alt="Foto publicada">
+                    </div>
+                @endif
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Título: {{$item->titulo}}</h5>
+                        <p class="card-text">Fecha de Publicación: {{$item->fecha}}</p>
+                        <p class="card-text"> {{$item->comentario}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+  </div>
   
 @endsection

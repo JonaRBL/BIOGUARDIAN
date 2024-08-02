@@ -1,4 +1,4 @@
-@extends('layouts.plantillaadmin')
+@extends('layouts.plantillaesp')
 
 @section('titulo', 'Avistamientos')
 

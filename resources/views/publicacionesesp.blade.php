@@ -1,4 +1,4 @@
-@extends('layouts.plantillaamb')
+@extends('layouts.plantillaesp')
 
 @section('titulo', 'Crear publicaciones')
 

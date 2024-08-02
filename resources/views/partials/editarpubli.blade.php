@@ -10,12 +10,12 @@
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Titulo</label>
-                            <input type="text" name="txtTitulo" class="form-control" value="{{($item->titulo)}}" >
+                            <input type="text" name="txtTitulo" class="form-control" value="{{($item->titulo)}}" required>
                             <p class="fw-bolder">{{ $errors->first('txtTitulo')}}</p>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Recuerdos</label>
-                            <input type="text" name="txtComentario" class="form-control" value="{{($item->comentario)}}" >
+                            <input type="text" name="txtComentario" class="form-control" value="{{($item->comentario)}}" required>
                             <p class="fw-bolder">{{ $errors->first('txtComentario')}}</p>
                         </div> 
             </div>
@@ -34,3 +34,34 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Edit form submission
+        document.querySelectorAll('form[action^="/editarpubli/"]').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Éxito',
+                            text: 'Publicación editada correctamente',
+                            timer: 2000,
+                            showConfirmButton: false
+                        }).then(() => {
+                            location.reload();
+                        });
+                    }
+                });
+            });
+        });
+    });
+</script>

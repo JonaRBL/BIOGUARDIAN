@@ -1,4 +1,4 @@
-@extends('layouts.plantillaespamb')
+@extends('layouts.plantillaesp')
 
 @section('titulo', 'Educación Ambiental')
 
@@ -45,13 +45,15 @@
         @foreach ($consultaPublicaciones as $item)
             <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col-md-4 img-container">
-                        <img src="{{ asset('storage/' . $item->foto_publi) }}" class="img-fluid rounded-start card-img">
-                    </div>
+                    @if($item->foto_publi)
+                        <div class="col-md-4 img-container">
+                            <img src="{{ asset('storage/' . $item->foto_publi) }}" class="img-fluid rounded-start card-img" alt="Foto publicada">
+                        </div>
+                    @endif
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{$item->titulo}}</h5>
-                            <p class="card-text"> {{$item->fecha}}</p>
+                            <h5 class="card-title">Título: {{$item->titulo}}</h5>
+                            <p class="card-text">Fecha de Publicación: {{$item->fecha}}</p>
                             <p class="card-text"> {{$item->comentario}}</p>
                             <div class="button-container">
                                 <button type='button' class='btn btn-success' data-bs-target='#editar{{ $item->id }}' data-bs-toggle='modal'>
@@ -69,5 +71,6 @@
             @include('partials.eliminarpubli', ['item' => $item])
         @endforeach
     </div>
+    
 
 @endsection

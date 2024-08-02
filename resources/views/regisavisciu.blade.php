@@ -1,4 +1,4 @@
-@extends('layouts.plantillaamb')
+@extends('layouts.plantillaciudadano')
 
 @section('titulo', 'Registro de avistamiento')
 
@@ -44,7 +44,7 @@
                     <div class="mb-3">
                         <label for="informacion" class="form-label">Información</label>
                         <div class="form-floating">
-                            <textarea class="form-control @error('informacion') is-invalid @enderror" name="informacion" id="informacion" placeholder="Leave a comment here" style="height: 100px"required>{{ old('informacion') }}</textarea>
+                            <textarea class="form-control @error('informacion') is-invalid @enderror" name="informacion" id="informacion" placeholder="Leave a comment here" style="height: 100px" required>{{ old('informacion') }}</textarea>
                             <label for="informacion">Escribe los datos aquí</label>
                             @error('informacion')
                             <div class="invalid-feedback">{{ $message }}</div>

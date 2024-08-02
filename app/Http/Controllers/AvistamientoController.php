@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Avistamiento;
 
 class AvistamientoController extends Controller
 {
@@ -32,8 +33,9 @@ class AvistamientoController extends Controller
             case 'ciudadano':
                 return 'avistamientos.avisciudadano';
             case 'especialista':
+                return 'avistamientos.avisesp';
             case 'ambientalista':
-                return 'avistamientos.avisespamb';
+                return 'avistamientos.avisamb';
             default:
                 return 'index'; // Vista por defecto
         }
@@ -42,7 +44,11 @@ class AvistamientoController extends Controller
     public function guardara(Request $req)
     {
         $idUsuario = Auth::id(); // Obtiene el ID del usuario autenticado
-    
+        
+        $req->validate([
+            'foto' => 'required',
+        ]);
+
         // Verifica si el archivo es válido y lo guarda en 'public/fotos'
         $fotoPath = null;
         if ($req->hasFile('foto') && $req->file('foto')->isValid()) {
@@ -100,5 +106,16 @@ class AvistamientoController extends Controller
         DB::table('avistamientos')->where('id', $id)->delete();
 
         return back()->with('confirmacion', 'Avistamiento eliminado correctamente');
+    }
+
+    public function destroy($id)
+    {
+        try {
+            $avistamiento = Avistamiento::findOrFail($id);
+            $avistamiento->delete();
+            return redirect()->back()->with('success', 'Avistamiento eliminado correctamente');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error al eliminar el avistamiento');
+        }
     }
 }
