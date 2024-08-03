@@ -130,7 +130,7 @@ body {
 </style>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2o0QDA85_790TVnmhWFJT_4lzRQrD9aU&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&callback=initMap" async defer></script>
 <script>
 function initMap() {
     var initialPos = { lat: 15.83752, lng: -92.75774 };

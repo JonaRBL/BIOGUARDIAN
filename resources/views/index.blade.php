@@ -4,15 +4,6 @@
 
 @section('contenido')
 
-{{-- <div class="a">
-    <img src="{{ asset('imagenes/logo.png') }}" width="200" height="200">
-</div>
-    
-<h1 class="display-1"> BIOGUARDIAN </h1> --}}
-  <style>
-
-  </style>
-
   <div id="carouselExampleCaptions" class="carousel slide mb-5">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -29,15 +20,13 @@
       <div class="carousel-item">
         <img src="https://wastemagazine.es/fotos2/lobo-1200-pixabay.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h1 class="display-1 fs-1" style="color: black">Elevando juntos el eco de la vida</h1>
         </div>
       </div>
       <div class="carousel-item">
         <img src="https://mx.parent.com/cdn/shop/articles/preschooler-boy-is-exploring-nature-with-magnifying-glass._1000x.jpg?v=1687225670" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+          <h1 class="display-1 fs-1" style="color: black">Tu plataforma para proteger y preservar la biodiversidad</h1>
         </div>
       </div>
     </div>
@@ -56,11 +45,11 @@
           <div class="card mb-3">
               <div class="row g-0">
                   @if($item->foto_publi)
-                      <div class="col-md-4 img-container">
+                      <div class="col-md-6 img-container">
                           <img src="{{ asset('storage/' . $item->foto_publi) }}" class="img-fluid rounded-start card-img" alt="Foto publicada">
                       </div>
                   @endif
-                  <div class="col-md-8">
+                  <div class="col-md-6">
                       <div class="card-body">
                           <h5 class="card-title">Título: {{$item->titulo}}</h5>
                           <p class="card-text">Fecha de Publicación: {{$item->fecha}}</p>

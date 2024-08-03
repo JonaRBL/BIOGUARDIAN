@@ -6,16 +6,17 @@
 
     <div class="container mt-4">
         <form action="{{ route('consultas') }}" method="GET" class="mb-3">
-            <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Buscar usuarios..." value="{{ request('search') }}">
-                <button type="submit" class="btn btn-primary">Buscar</button>
+            <div class="d-flex justify-content-end">
+                <div class="input-group" style="width: 500px">
+                    <input type="text" name="search" class="form-control" placeholder="Buscar usuarios..." value="{{ request('search') }}">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
             </div>
         </form>
-        <h2>Lista de Usuarios</h2>
-        <table class="table">
+        <h1>Lista de Usuarios</h1>
+        <table class="table" style="background: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Email</th>
                     <th>Rol</th>
@@ -26,7 +27,6 @@
             <tbody>
                 @foreach($users as $user)
                 <tr>
-                    <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->role }}</td>

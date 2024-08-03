@@ -46,11 +46,11 @@
         <div class="card mb-3">
             <div class="row g-0">
                 @if($item->foto_publi)
-                    <div class="col-md-4 img-container">
+                    <div class="col-md-6 img-container">
                         <img src="{{ asset('storage/' . $item->foto_publi) }}" class="img-fluid rounded-start card-img" alt="Foto publicada">
                     </div>
                 @endif
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="card-body">
                         <h5 class="card-title">Título: {{$item->titulo}}</h5>
                         <p class="card-text">Fecha de Publicación: {{$item->fecha}}</p>

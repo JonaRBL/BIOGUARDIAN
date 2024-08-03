@@ -7,10 +7,10 @@
         @foreach ($consultaAvistamientos as $item)
             <div class="card mb-3">
                 <div class="row g-0">
-                    <div class="col-md-4 img-container">
+                    <div class="col-md-6 img-container">
                         <img src="{{ asset('storage/' . $item->foto) }}" class="img-fluid rounded-start card-img">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="card-body">
                             <p class="card-text"> Fecha: {{$item->fecha}}</p>
                             <p class="card-text"> Reporte: {{$item->informacion}}</p>

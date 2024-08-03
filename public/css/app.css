@@ -67,6 +67,11 @@ h1 {
     max-width: 100%; /* Asegura que el ancho máximo sea del 100% */
 }
 
+.btn-primary {
+    background-color: #3B8C40 !important;
+    border-color: #77bf56 !important;
+}
+
 .card {
     background: #3A7038;
     width: 100%;
@@ -109,6 +114,9 @@ h1 {
 .card .img-container {
     flex: 0 0 40%; /* Ajustar el ancho de la imagen */
     max-width: 40%;
+    display: flex; /* Añadir esto */
+    justify-content: center; /* Añadir esto */
+    align-items: center; /* Añadir esto */
 }
 
 .card .img-container img {
@@ -164,6 +172,6 @@ h1 {
 }
 
 .btn-danger {
-    background-color: #dc3545;
+    background-color: red;
     border-color: #dc3545;
 }
