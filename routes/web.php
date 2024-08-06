@@ -8,6 +8,7 @@ use App\Http\Controllers\CiudadanoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controlpublicaciones;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 /* use App\Http\Controllers\Auth; */
 
 /*
@@ -57,6 +58,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/InicioCiu', [CiudadanoController::class, 'inicio'])->name('ciudadano');
         // Agrega más rutas para ciudadano aquí
     });
+
+    
 });
 
 // Rutas para el controlador de publicaciones
@@ -99,3 +102,13 @@ Route::get('/users', [UserController::class, 'index'])->name('consultas');
 Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::delete('/avistamientos/{id}', [AvistamientoController::class, 'destroy'])->name('avistamientos.destroy');
+
+
+
+Route::post('/perfil/update', [ProfileController::class, 'update'])->name('perfil.update');
+Route::delete('/perfil/{id}', [ProfileController::class, 'destroy'])->name('perfil.destroy');
+
+
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+Route::get('/profile2', [CiudadanoController::class, 'show'])->name('profile2.show');
+Route::get('/profile3', [EspecialistaController::class, 'show'])->name('profile3.show');

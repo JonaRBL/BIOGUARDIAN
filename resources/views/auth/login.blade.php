@@ -64,4 +64,14 @@
             </div>
         </div>
     </div>
+    @if(session()->has('confirmacion2'))
+    <script>
+        Swal.fire({
+            title: 'Confirmación',
+            text: '{{ session('confirmacion2') }}',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+        });
+    </script>
+    @endif
 @endsection

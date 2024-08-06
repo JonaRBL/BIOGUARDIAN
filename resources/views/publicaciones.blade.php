@@ -28,7 +28,7 @@
         </div>
         <div class="col-md-7">
             <div class="login-header">
-                Crear Publicación
+                <h1 class="fs-2"> Crear Publicación </h1>
             </div>
             <div class="card-body">
                 <form method="POST" action="/guardarpublicacion" enctype="multipart/form-data">
@@ -68,7 +68,7 @@
 
 <style>
 body {
-    font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto al cuerpo del documento */
+    font-family: 'Inter', sans-serif; /* Aplica la fuente Roboto al cuerpo del documento */
     background-size: cover;
     background-position: center;
 }
@@ -108,18 +108,16 @@ body {
 }
 
 .login-header {
-    font-family: 'Arial', sans-serif;
     text-align: center;
-    font-size: 2rem;
     color: #007bff;
+    margin-top: 20px;
     margin-bottom: 20px;
-    font-weight: 700; /* Hace el texto más grueso */ /* Convierte el texto a mayúsculas */
     letter-spacing: 0.5px; /* Añade espacio entre las letras */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .login-title {
-    font-family: 'Arial', sans-serif; /* Tipografía */
+    font-family: 'Inter', sans-serif; /* Tipografía */
     font-size: 1.5em; /* Tamaño de fuente */
     color: #333; /* Color del texto */
     text-align: center; /* Alineación */

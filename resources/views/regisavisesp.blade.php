@@ -28,7 +28,7 @@
         </div>
         <div class="col-md-7">
             <div class="login-header">
-                Registrar avistamiento
+                <h1 class="fs-2"> Registrar avistamiento </h1>
             </div>
             <div class="card-body">
                 <form method="POST" action="/guardaravistamiento" enctype="multipart/form-data">
@@ -69,7 +69,7 @@
 
 <style>
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-size: cover;
     background-position: center;
 }
@@ -107,18 +107,15 @@ body {
 }
 
 .login-header {
-    font-family: 'Arial', sans-serif;
     text-align: center;
-    font-size: 2rem;
     color: #007bff;
+    margin-top: 20px;
     margin-bottom: 20px;
-    font-weight: 700;
     letter-spacing: 0.5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 .login-title {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.5em;
     color: #333;
     text-align: center;
