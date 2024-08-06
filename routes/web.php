@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controlpublicaciones;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArticuloController;
 /* use App\Http\Controllers\Auth; */
 
 /*
@@ -112,3 +113,21 @@ Route::delete('/perfil/{id}', [ProfileController::class, 'destroy'])->name('perf
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
 Route::get('/profile2', [CiudadanoController::class, 'show'])->name('profile2.show');
 Route::get('/profile3', [EspecialistaController::class, 'show'])->name('profile3.show');
+
+Route::get('/articulociu', [ArticuloController::class, 'index'])->name('noticiasciu');
+Route::get('/articuloesp', [EspecialistaController::class, 'index'])->name('noticiasesp');
+Route::get('/articuloamb', [AmbientalistaController::class, 'index'])->name('noticiasamb');
+Route::get('/articuloadmin', [AdminController::class, 'index'])->name('noticiasadmin');
+
+Route::get('/mapaciu', function () {
+    return view('/mapa/mapaciu');
+})->name('mapaciu');
+Route::get('/mapaesp', function () {
+    return view('/mapa/mapaesp');
+})->name('mapaesp');
+Route::get('/mapaamb', function () {
+    return view('/mapa/mapaamb');
+})->name('mapaamb');
+Route::get('/mapaadmin', function () {
+    return view('/mapa/mapaadmin');
+})->name('mapaadmin');

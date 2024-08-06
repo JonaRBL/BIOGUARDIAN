@@ -2,31 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
+use App\Models\Articulo;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
-class EspecialistaController extends Controller
+class ArticuloController extends Controller
 {
-    public function inicio()
-    {
-        $consultaPublicaciones= DB::table('tb_publicaciones')->get();
-        return view('/inicio/inicioesp', compact('consultaPublicaciones'));
-    }
-
-    public function show()
-    {
-        $userId = Auth::id(); // Obtén el ID del usuario autenticado
-
-        // Obtén los datos del usuario desde la base de datos
-        $user = DB::table('users')->where('id', $userId)->first();
-
-        return view('perfil3', ['user' => $user]); // Pasa el usuario a la vista
-    }
-
     public function index()
     {
         // Llamar a la API para obtener los artículos
@@ -47,6 +29,6 @@ class EspecialistaController extends Controller
         }
 
         // Pasar la variable $articles a la vista
-        return view('/noticias/noticiasesp', compact('articles'));
+        return view('/noticias/noticiasciu', compact('articles'));
     }
 }

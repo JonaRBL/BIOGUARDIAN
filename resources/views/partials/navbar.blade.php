@@ -18,7 +18,7 @@
             
             <ul class="d-flex navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('login') ? 'font-weight-bold' : '' }}" aria-current="page" href="{{ route('login') }}">Iniciar Sesion</a>
+                    <a class="nav-link {{ request()->routeIs('login') ? 'font-weight-bold' : '' }}" aria-current="page" href="{{ route('login') }}">Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('register') ? 'font-weight-bold' : '' }}" aria-current="page" href="{{ route('register') }}">Registrarse</a>

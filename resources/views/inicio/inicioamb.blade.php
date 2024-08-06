@@ -14,21 +14,19 @@
             <div class="carousel-item active">
                 <img src="https://visado-india.es/wp-content/uploads/2023/01/animales-de-la-india-como-es-su-fauna.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="display-1" style="color: black"> BIOGUARDIAN </h1>
-                </div>
+                <h1 class="display-1" style="color: black"> BIOGUARDIAN </h1>
             </div>
-            <div class="carousel-item">
-                <img src="https://wastemagazine.es/fotos2/lobo-1200-pixabay.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://wastemagazine.es/fotos2/lobo-1200-pixabay.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="display-1 fs-1" style="color: black">Elevando juntos el eco de la vida</h1>
             </div>
+        </div>
             <div class="carousel-item">
                 <img src="https://mx.parent.com/cdn/shop/articles/preschooler-boy-is-exploring-nature-with-magnifying-glass._1000x.jpg?v=1687225670" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h1 class="display-1 fs-1" style="color: black">Tu plataforma para proteger y preservar la biodiversidad</h1>
                 </div>
             </div>
         </div>
