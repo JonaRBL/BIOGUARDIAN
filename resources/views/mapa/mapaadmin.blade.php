@@ -5,7 +5,7 @@
 @section('contenido')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-8 mt-4">
+            <div class="col-12 col-md-8 mt-4">
                 <div class="card">
                     <div class="card-body text-center">
                         <p class="card-text">Las áreas naturales protegidas son esenciales para la preservación de la biodiversidad y el mantenimiento de los procesos ecológicos vitales que soportan la vida en el planeta. Proteger estas áreas es una inversión en el futuro sostenible de nuestro entorno natural y de la humanidad misma. ¡Conocelas!</p>
@@ -146,7 +146,16 @@
             z-index: 1000;
         }
 
-        
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .col-8 {
+                width: 100%;
+            }
+        }
 
     </style>
 @endsection
